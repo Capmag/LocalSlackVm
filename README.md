@@ -1,6 +1,7 @@
 Proyecto Final – LocalStack + Terraform (AWS simulado)
 Autor: Raul Renteria
 Matrícula: 20490733
+
 Proyecto: proyecto_final_raulrenteria-20490733
 
 Descripción
@@ -12,13 +13,13 @@ Terraform: la herramienta de Infraestructura como Código (IaC) utilizada para d
 
 La arquitectura resultante incluye tres capas lógicas:
 
-Red y Seguridad (networking): VPC, subred, Internet Gateway e identidades de seguridad que permiten tráfico HTTP.
+Red y Seguridad (networking): VPC, subred, Internet Gateway e identidades de seguridad que permiten tráfico HTTP.
 
 Almacenamiento: un bucket S3 llamado proyecto-final-alumno-20490733 con un archivo estático index.html cargado a través de Terraform.
 
 Base de Datos: una tabla DynamoDB llamada Usuarios con una clave de partición (UserID).
 
-Todo el entorno se ejecuta localmente en una máquina virtual (por ejemplo en Google Cloud) sin requerir acceso a AWS real, lo que facilita el aprendizaje y las pruebas de IaC.
+Todo el entorno se ejecuta localmente en una máquina virtual (por ejemplo en Google Cloud) sin requerir acceso a AWS real, lo que facilita el aprendizaje y las pruebas de IaC.
 
 Requisitos
 En la máquina donde se ejecuta este proyecto necesitas instalar:
@@ -194,3 +195,5 @@ aws --endpoint-url=http://localhost:4566 s3 ls s3://proyecto-final-alumno-204907
 aws --endpoint-url=http://localhost:4566 dynamodb list-tables mostrando la tabla Usuarios.
 
 Estas evidencias demuestran que tu entorno local funciona y que se han cumplido todos los requisitos del proyecto.
+
+

@@ -9,7 +9,7 @@ terraform {
   }
 }
 
-# Nombre de proyecto personalizado con matrícula
+
 locals {
   project_name_full = "proyecto_final_raulrenteria-20490733"
 }
@@ -58,7 +58,7 @@ resource "aws_subnet" "main" {
   }
 }
 
-# Internet Gateway (simulado, útil para topología)
+# Internet Gateway 
 resource "aws_internet_gateway" "main" {
   vpc_id = aws_vpc.main.id
 
@@ -74,7 +74,7 @@ resource "aws_security_group" "ec2" {
   description = "Security group for EC2 instance (HTTP)"
   vpc_id      = aws_vpc.main.id
 
-  # Ingress HTTP (puerto 80) - requerido por la práctica
+  # Ingress HTTP (puerto 80)
   ingress {
     from_port   = 80
     to_port     = 80
@@ -100,7 +100,7 @@ resource "aws_security_group" "ec2" {
 # CÓMPUTO (EC2 simulado)
 # ==========================
 
-# Definición de instancia EC2 (en LocalStack Community es simulada, pero cumple el requisito)
+# Definición de instancia EC2 
 resource "aws_instance" "web" {
   count = 0 
   ami           = var.ec2_ami
@@ -119,8 +119,7 @@ resource "aws_instance" "web" {
 # ALMACENAMIENTO (S3)
 # ==========================
 
-# Bucket S3 con el nombre requerido en la práctica:
-# proyecto-final-alumno-{matricula}
+# Bucket S3 
 resource "aws_s3_bucket" "main" {
   bucket = "proyecto-final-alumno-20490733"
 
@@ -141,7 +140,6 @@ resource "aws_s3_bucket_versioning" "main" {
 }
 
 # Objeto index.html subido al bucket mediante Terraform
-# Asegúrate de tener un archivo index.html en el mismo directorio del main.tf
 resource "aws_s3_object" "index_html" {
   bucket       = aws_s3_bucket.main.id
   key          = "index.html"

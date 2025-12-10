@@ -1,0 +1,13 @@
+# Carpetas generadas por Terraform
+.terraform/
+.terraform.lock.hcl
+
+# Estados de Terraform
+terraform.tfstate
+terraform.tfstate.*
+
+# Datos de LocalStack
+localstack-data/
+
+# Otros típicos
+*.log

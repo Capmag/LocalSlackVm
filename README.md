@@ -1,3 +1,7 @@
+Proyecto Final: Simulación de Infraestructura Cloud con Terraform y LocalStack (AWS)
+Andres Raul Renteria Gastelum 
+20490733
+
 Este documento explica cómo iniciar nuevamente el entorno, verificar LocalStack, consultar los recursos ya creados y demostrar que el proyecto funciona correctamente.
 
 1. Requisitos previos

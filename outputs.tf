@@ -8,7 +8,7 @@ output "subnet_id" {
   value       = aws_subnet.main.id
 }
 
-# Como aws_instance.web usa count = 0, puede no existir ninguna instancia.
+# Como aws_instance.web usa count = 0
 # Usamos un condicional para evitar errores.
 output "ec2_instance_id" {
   description = "ID of the EC2 instance (si existe)"
